@@ -34,7 +34,7 @@ if read_the_docs_build:
 		file.write(filedata)
 
 	subprocess.call('doxygen', shell=True)
-	breathe_projects.CatCutifier = output_dir
+	breathe_projects['CatCutifier'] = output_dir
 
 
 # -- Project information -----------------------------------------------------
