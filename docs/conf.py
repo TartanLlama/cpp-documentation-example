@@ -15,11 +15,22 @@
 # sys.path.insert(0, os.path.abspath('.'))
 
 import subprocess, os
+import fileinput
+
 
 read_the_docs_build = os.environ.get('READTHEDOCS', None) == 'True'
 
+breathe_projects = {}
 if read_the_docs_build:
+	input_dir = '../CatCutifier'
+	output_dir = 'build'
+	with fileinput.FileInput('Doxyfile.in', inplace=True, backup='.bak') as file:
+		for line in file:
+			line = line.replace('@DOXYGEN_INPUT_DIR@', input_dir)
+			line = line.replace('@DOXYGEN_OUTPUT_DIR@', output_dir)
+			print(line, end='')
     subprocess.call('doxygen', shell=True)
+	breathe_projects.CatCutifier = output_dir
 
 
 # -- Project information -----------------------------------------------------
