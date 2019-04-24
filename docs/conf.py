@@ -24,11 +24,15 @@ breathe_projects = {}
 if read_the_docs_build:
 	input_dir = '../CatCutifier'
 	output_dir = 'build'
-	with fileinput.FileInput('Doxyfile.in', inplace=True, backup='.bak') as file:
-		for line in file:
-			line = line.replace('@DOXYGEN_INPUT_DIR@', input_dir)
-			line = line.replace('@DOXYGEN_OUTPUT_DIR@', output_dir)
-			print(line, end='')
+	with open('Doxyfile.in', 'r') as file :
+		filedata = file.read()
+
+	filedata = filedata.replace('@DOXYGEN_INPUT_DIR@', input_dir)
+	filedata = filedata.replace('@DOXYGEN_OUTPUT_DIR@', output_dir)
+	
+	with open('Doxyfile', 'w') as file:
+		file.write(filedata)
+
     subprocess.call('doxygen', shell=True)
 	breathe_projects.CatCutifier = output_dir
 
