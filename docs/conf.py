@@ -24,7 +24,7 @@ breathe_projects = {}
 if read_the_docs_build:
 	input_dir = '../CatCutifier'
 	output_dir = 'build'
-	with open('Doxyfile.in', 'r') as file :
+	with open('../Doxyfile.in', 'r') as file :
 		filedata = file.read()
 
 	filedata = filedata.replace('@DOXYGEN_INPUT_DIR@', input_dir)
