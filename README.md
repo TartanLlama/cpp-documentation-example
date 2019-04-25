@@ -1,5 +1,5 @@
 # cpp-documentation-example
-An example of setting up CMake + Sphinx + Read the Docs for C++
+An example of setting up Sphinx for C++ and building with CMake and Read the Docs
 
 See the documentation [here](https://cpp-documentation-example.readthedocs.io/en/latest/)
 
