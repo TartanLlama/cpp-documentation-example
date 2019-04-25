@@ -1,8 +1,10 @@
 find_package(Doxygen REQUIRED)
 find_package(Sphinx REQUIRED)
 
-# The list of headers which we are documenting
-set(CAT_CUTIFIER_PUBLIC_HEADERS ${PROJECT_SOURCE_DIR}/CatCutifier/CatCutifier.h)
+# Find all the public headers
+get_target_property(CAT_CUTIFIER_PUBLIC_HEADER_DIR CatCutifier INTERFACE_INCLUDE_DIRECTORIES)
+file(GLOB_RECURSE CAT_CUTIFIER_PUBLIC_HEADERS 
+	${CAT_CUTIFIER_PUBLIC_HEADER_DIR}/*.h)
 
 set(DOXYGEN_INPUT_DIR ${PROJECT_SOURCE_DIR}/CatCutifier)
 set(DOXYGEN_OUTPUT_DIR ${CMAKE_CURRENT_BINARY_DIR}/doxygen)
