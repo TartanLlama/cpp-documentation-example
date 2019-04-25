@@ -19,7 +19,7 @@ import subprocess, os
 def configureDoxyfile():
 	input_dir = '../CatCutifier'
 	output_dir = 'build'
-	with open('../Doxyfile.in', 'r') as file :
+	with open('Doxyfile.in', 'r') as file :
 		filedata = file.read()
 
 	filedata = filedata.replace('@DOXYGEN_INPUT_DIR@', input_dir)
