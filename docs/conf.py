@@ -16,9 +16,8 @@
 
 import subprocess, os
 
-def configureDoxyfile():
-	input_dir = '../CatCutifier'
-	output_dir = 'build'
+def configureDoxyfile(input_dir, output_dir):
+
 	with open('Doxyfile.in', 'r') as file :
 		filedata = file.read()
 
@@ -33,7 +32,9 @@ read_the_docs_build = os.environ.get('READTHEDOCS', None) == 'True'
 
 breathe_projects = {}
 if read_the_docs_build:
-	configureDoxyfile()
+	input_dir = '../CatCutifier'
+	output_dir = 'build'
+	configureDoxyfile(input_dir, output_dir)
 	subprocess.call('doxygen', shell=True)
 	breathe_projects['CatCutifier'] = output_dir + '/xml'
 
