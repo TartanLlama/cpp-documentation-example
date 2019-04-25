@@ -5,6 +5,7 @@ See the documentation [here](https://cpp-documentation-example.readthedocs.io/en
 
 ## Dependencies
 
+- [CMake](https://cmake.org/download/)
 - [Doxygen](http://www.doxygen.nl/download.html)
 - [Sphinx](https://www.sphinx-doc.org/en/master/usage/installation.html)
 - [Breathe](https://pypi.org/project/breathe/)
