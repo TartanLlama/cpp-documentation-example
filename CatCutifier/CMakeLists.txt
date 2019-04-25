@@ -1,9 +1,3 @@
-﻿# CMakeList.txt : CMake project for CatCutifier, include source and define
-# project specific logic here.
-#
-cmake_minimum_required (VERSION 3.8)
+﻿add_library (CatCutifier "CatCutifier.cpp" "CatCutifier.h")
 
-# Add source to this project's executable.
-add_library (CatCutifier "CatCutifier.cpp" "CatCutifier.h")
-
-# TODO: Add tests and install targets if needed.
+# Should install library properly here, but I'm focusing on just the docs

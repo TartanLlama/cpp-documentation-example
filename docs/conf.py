@@ -16,10 +16,7 @@
 
 import subprocess, os
 
-read_the_docs_build = os.environ.get('READTHEDOCS', None) == 'True'
-
-breathe_projects = {}
-if read_the_docs_build:
+def configureDoxyfile():
 	input_dir = '../CatCutifier'
 	output_dir = 'build'
 	with open('../Doxyfile.in', 'r') as file :
@@ -31,6 +28,12 @@ if read_the_docs_build:
 	with open('Doxyfile', 'w') as file:
 		file.write(filedata)
 
+# Check if we're running on Read the Docs' servers
+read_the_docs_build = os.environ.get('READTHEDOCS', None) == 'True'
+
+breathe_projects = {}
+if read_the_docs_build:
+	configureDoxyfile()
 	subprocess.call('doxygen', shell=True)
 	breathe_projects['CatCutifier'] = output_dir + '/xml'
 
