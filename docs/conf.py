@@ -16,12 +16,16 @@
 
 import subprocess, os
 
-def configureDoxyfile(input_dir, output_dir):
+def configureDoxyfile(top_dir, output_dir):
 
 	with open('Doxyfile.in', 'r') as file :
 		filedata = file.read()
 
-	filedata = filedata.replace('@DOXYGEN_INPUT_DIR@', input_dir)
+	input_dir_src = top_dir + "/src"
+	input_dir_include = top_dir + "/include"
+
+	filedata = filedata.replace('@DOXYGEN_INPUT_DIR_SRC@', input_dir_src)
+	filedata = filedata.replace('@DOXYGEN_INPUT_DIR_INCLUDE@', input_dir_include)
 	filedata = filedata.replace('@DOXYGEN_OUTPUT_DIR@', output_dir)
 	
 	with open('Doxyfile', 'w') as file:
@@ -32,16 +36,16 @@ read_the_docs_build = os.environ.get('READTHEDOCS', None) == 'True'
 
 breathe_projects = {}
 if read_the_docs_build:
-	input_dir = '../CatCutifier'
+	top_dir = '../'
 	output_dir = 'build'
-	configureDoxyfile(input_dir, output_dir)
+	configureDoxyfile(top_dir, output_dir)
 	subprocess.call('doxygen', shell=True)
-	breathe_projects['CatCutifier'] = output_dir + '/xml'
+	breathe_projects['main_project'] = output_dir + '/xml'
 
 
 # -- Project information -----------------------------------------------------
 
-project = 'CatCutifier'
+project = 'cat_cutifier'
 copyright = '2019, Simon Brand'
 author = 'Simon Brand'
 
@@ -79,4 +83,5 @@ html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
 
 # Breathe Configuration
-breathe_default_project = "CatCutifier"
+breathe_default_project = "main_project"
+

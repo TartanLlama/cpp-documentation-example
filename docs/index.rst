@@ -15,5 +15,26 @@ Welcome to CatCutifier's documentation!
 Docs
 ====
 
+Animals
+-------
+
+First we have some animals
+
+.. doxygennamespace:: Animals
+   :members:
+
+Cats
+----
+
+Enter the cats
+
 .. doxygenstruct:: cat
+   :members:
+
+Dogs
+----
+
+And the dogs
+
+.. doxygenstruct:: dog
    :members:
