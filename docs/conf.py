@@ -42,8 +42,8 @@ if read_the_docs_build:
 # -- Project information -----------------------------------------------------
 
 project = 'pspg_cpptpt'
-copyright = '2019, Simon Brand'
-author = 'Simon Brand'
+copyright = '2019, Geoffysicist'
+author = 'Geoffysicist adapted from Simon Brand'
 
 
 # -- General configuration ---------------------------------------------------
