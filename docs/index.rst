@@ -15,5 +15,5 @@ Welcome to pspg_cpptpt's documentation!
 Docs
 ====
 
-.. doxygenstruct:: cat
+.. doxygenstruct:: this_structure
    :members:
