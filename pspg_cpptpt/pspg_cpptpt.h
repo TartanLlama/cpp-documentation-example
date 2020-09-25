@@ -1,11 +1,11 @@
 ﻿#pragma once
 
 /**
-	A fluffy feline
+	A structure with some purpose
 */
-struct cat {
+struct this_structure {
 	/**
-		Make this cat look super cute
+		A public function which should do something
 	*/
-	void make_cute();
+	void public_function();
 };
