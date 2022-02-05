@@ -1,11 +1,11 @@
 ﻿#pragma once
 
 /**
-	A fluffy feline
+	A fluffy rabbit
 */
-struct cat {
+struct rabbit {
 	/**
-		Make this cat look super cute
+		Make this rabbit look super cute
 	*/
 	void make_cute();
 };
