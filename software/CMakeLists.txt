@@ -1,4 +1,4 @@
-﻿add_library (MySuperProject "app/my_app.cpp" "app/my_app.h")
-target_include_directories(MySuperProject PUBLIC app)
+﻿cmake_minimum_required (VERSION 3.8)
 
-# Should install library properly here, but I'm focusing on just the docs
+add_subdirectory ("app")
+add_subdirectory ("test")

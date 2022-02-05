@@ -9,3 +9,5 @@ docs/sphinx/*
 docs/Doxyfile
 CMakeDoxyfile.in
 CMakeCache.txt
+MySuperProject
+*.exe
