@@ -2,7 +2,7 @@ find_package(Doxygen REQUIRED)
 find_package(Sphinx REQUIRED)
 
 # Find all the public headers
-get_target_property(CAT_CUTIFIER_PUBLIC_HEADER_DIR CatCutifier INTERFACE_INCLUDE_DIRECTORIES)
+get_target_property(CAT_CUTIFIER_PUBLIC_HEADER_DIR MySuperProject INTERFACE_INCLUDE_DIRECTORIES)
 file(GLOB_RECURSE CAT_CUTIFIER_PUBLIC_HEADERS 
 	${CAT_CUTIFIER_PUBLIC_HEADER_DIR}/*.h)
 
@@ -41,7 +41,7 @@ add_custom_command(OUTPUT ${SPHINX_INDEX_FILE}
 	COMMAND 
 		${SPHINX_EXECUTABLE} -b html
 		# Tell Breathe where to find the Doxygen output
-		-Dbreathe_projects.CatCutifier=${DOXYGEN_OUTPUT_DIR}/xml
+		-Dbreathe_projects.MySuperProject=${DOXYGEN_OUTPUT_DIR}/xml
 		${SPHINX_SOURCE} ${SPHINX_BUILD}
 	WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
 	DEPENDS 
