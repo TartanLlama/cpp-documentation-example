@@ -1,0 +1,11 @@
+.catcutifier_x
+.catcutifier_w
+*/CMakeFiles/*
+*Makefile*
+docs/doxygen/*
+docs/sphinx/*
+*.cmake
+*.a
+docs/Doxyfile
+CMakeDoxyfile.in
+CMakeCache.txt
