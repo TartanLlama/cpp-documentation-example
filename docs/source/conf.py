@@ -14,6 +14,15 @@
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
+# -- Project information -----------------------------------------------------
+
+project = 'MySuperProject'
+copyright = '2022, Qluit'
+author = 'Bas Kluiters'
+
+
+# -- Read the Docs -----------------------------------------------------
+
 import subprocess, os
 
 def configureDoxyfile(input_dir, output_dir):
@@ -36,14 +45,7 @@ if read_the_docs_build:
 	output_dir = 'build'
 	configureDoxyfile(input_dir, output_dir)
 	subprocess.call('doxygen', shell=True)
-	breathe_projects['CatCutifier'] = output_dir + '/xml'
-
-
-# -- Project information -----------------------------------------------------
-
-project = 'MySuperProject'
-copyright = '2019, Simon Brand'
-author = 'Simon Brand'
+	breathe_projects[project] = output_dir + '/xml'
 
 
 # -- General configuration ---------------------------------------------------
@@ -79,4 +81,4 @@ html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
 
 # Breathe Configuration
-breathe_default_project = "MySuperProject"
+breathe_default_project = project
