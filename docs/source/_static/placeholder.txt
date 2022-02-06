@@ -1,0 +1,3 @@
+
+Remove this text file once you put the first image in this folder
+Just here to make sure that this folder is generated from Git
