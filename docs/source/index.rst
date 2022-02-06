@@ -1,6 +1,6 @@
 
-Welcome to MySuperApp's documentation!
-=======================================
+Welcome to my documentation!
+============================
 
 .. toctree::
    :maxdepth: 2

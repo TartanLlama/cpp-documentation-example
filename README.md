@@ -30,15 +30,18 @@ And sometimes: cmake --build .
 
 If you want to reuse this as a starting point for your development:
 
-- Rename the virtual environment in activate.* and adapt .gitignore accordingly
-- Rename the MySuperApp in
+### Virtual environment
 
-  - CMakeLists.txt : To adapt the name of the CMake project (used as: @CMAKE_PROJECT_NAME@)
-  - software/app/CMakeLists.txt : Change the name of the executable to be built
-  - docs/source/index.rst : The title of the documentation
-  - docs/source/conf.py : Configuration of the Sphinx/Breathe documentation
-  
+- Rename the virtual environment in activate.* and adapt .gitignore accordingly
 - run deactivate
+- remove the old virtual environment
 - activate again
+
+
+### Rename MySuperApp in
+
+- CMakeLists.txt : To adapt the name of the CMake project (used as: @CMAKE_PROJECT_NAME@)
+- docs/source/conf.py : Configuration of the Sphinx/Breathe documentation
+  
 
 
