@@ -24,7 +24,8 @@ add_custom_command(OUTPUT ${DOXYGEN_INDEX_FILE}
         	COMMAND ${DOXYGEN_EXECUTABLE} ${DOXYFILE_OUT}
 		MAIN_DEPENDENCY ${DOXYFILE_OUT} ${DOXYFILE_IN}
         	COMMENT "Generating docs"
-		VERBATIM)
+# 		VERBATIM
+		)
 
 # Nice named target so we can run the job easily
 add_custom_target(Doxygen ALL DEPENDS ${DOXYGEN_INDEX_FILE})
