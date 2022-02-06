@@ -8,9 +8,9 @@ Welcome to MySuperApp's documentation!
 
 :ref:`genindex`
 
-Docs
-====
+Code Documentation
+==================
 
-.. doxygenstruct:: rabbit
-   :members:
+.. doxygenclass:: Name
+    :members:
    

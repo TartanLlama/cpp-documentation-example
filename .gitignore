@@ -10,4 +10,4 @@ docs/Doxyfile
 CMakeDoxyfile.in
 CMakeCache.txt
 MySuperProject
-*.exe
+NameTest
