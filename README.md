@@ -8,9 +8,6 @@ See the documentation [here](https://cpp-documentation-example.readthedocs.io/en
 - [Python3](https://www.python.org/downloads/)
 - [CMake](https://cmake.org/download/)
 - [Doxygen](http://www.doxygen.nl/download.html)
-- [Sphinx](https://www.sphinx-doc.org/en/master/usage/installation.html)
-- [Breathe](https://pypi.org/project/breathe/)
-- [sphinx_rtd_theme](https://github.com/rtfd/sphinx_rtd_theme)
 
 ## Activating
 
