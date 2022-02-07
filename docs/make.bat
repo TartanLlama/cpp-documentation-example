@@ -10,6 +10,14 @@ if "%SPHINXBUILD%" == "" (
 set SOURCEDIR=source
 set BUILDDIR=sphinx
 
+set READTHEDOCS=True
+del Doxyfile
+set ORGPATH=%PATH%
+set PATH=c:\Program Files\doxygen\bin\;%PATH%
+python %SOURCEDIR%\conf.py
+set PATH=%ORGPATH%
+set READTHEDOCS=False
+
 if "%1" == "help" goto help
 if not "%1" == "" goto original
 
@@ -26,7 +34,7 @@ if errorlevel 9009 (
 	exit /b 1
 )
 
-%SPHINXBUILD% -b html %SOURCEDIR% %BUILDDIR% %SPHINXOPTS% %O%
+%SPHINXBUILD% -b html -Dbreathe_projects.MySuperProject=%CD%\doxygen\xml %SOURCEDIR% %BUILDDIR% %SPHINXOPTS% %O%
 goto end
 
 :original

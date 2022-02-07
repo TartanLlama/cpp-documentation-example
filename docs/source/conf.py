@@ -30,6 +30,7 @@ def configureDoxyfile(input_dir, output_dir):
 	with open('Doxyfile.in', 'r') as file :
 		filedata = file.read()
 
+	filedata = filedata.replace('@CMAKE_PROJECT_NAME@', project)
 	filedata = filedata.replace('@DOXYGEN_INPUT_DIR@', input_dir)
 	filedata = filedata.replace('@DOXYGEN_OUTPUT_DIR@', output_dir)
 	
@@ -41,8 +42,8 @@ read_the_docs_build = os.environ.get('READTHEDOCS', None) == 'True'
 
 breathe_projects = {}
 if read_the_docs_build:
-	input_dir = '../CatCutifier'
-	output_dir = 'build'
+	input_dir = '../software/app'
+	output_dir = 'doxygen'
 	configureDoxyfile(input_dir, output_dir)
 	subprocess.call('doxygen', shell=True)
 	breathe_projects[project] = output_dir + '/xml'

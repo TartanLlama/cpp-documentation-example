@@ -39,6 +39,7 @@ If you want to reuse this as a starting point for your development:
 
 - `CMakeLists.txt` : To adapt the name of the CMake project (used as: `@CMAKE_PROJECT_NAME@`)
 - `docs/source/conf.py` : Configuration of the Sphinx/Breathe documentation
+- `docs/make.bat` : Batchfile for Windows builds
   
 
 
