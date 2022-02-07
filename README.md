@@ -1,5 +1,5 @@
 # cpp-documentation-example
-An example of setting up Sphinx for C++ and building with CMake and Read the Docs
+An example of setting up Sphinx and Doxygen for C++ and building with CMake and Read the Docs
 
 See the documentation [here](https://cpp-documentation-example.readthedocs.io/en/latest/)
 
@@ -12,13 +12,14 @@ See the documentation [here](https://cpp-documentation-example.readthedocs.io/en
 ## Activating
 
 Activate the environment by running `activate.sh` or `activate.bat`
-This also compiles the code and the documentation
+This also compiles the code and the documentation on OSX
 
 ## Building
 
-Building the code as well as the documentation: `make`
+Building the code as well as the documentation on OSX: `make`
+Building the documentation on Windows: `cd docs\` and `make.bat`.
 
-## Rebuilding
+## Rebuilding (OSX only)
 
 To fix some dependencies: `make clean`
 And sometimes: `cmake --build .`
